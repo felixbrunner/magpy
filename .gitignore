@@ -1,5 +1,8 @@
 # Ignore output folder
 output
 
+# Ignore theme folder
+themes
+
 # Ignore HTML files
 *.html
