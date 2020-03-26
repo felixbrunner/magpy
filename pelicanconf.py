@@ -37,5 +37,5 @@ DEFAULT_PAGINATION = 10
 
 # Additional variables
 
-THEME = 'themes/bootstrap2'
+THEME = 'themes/flex'
 OUTPUT_PATH = 'felixbrunner.github.io'
