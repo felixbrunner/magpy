@@ -4,5 +4,8 @@ felixbrunner.github.io
 # Ignore theme folder
 themes
 
+# Ignore plugins folder
+pelican-plugins
+
 # Ignore HTML files
 *.html
