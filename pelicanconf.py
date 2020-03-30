@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 # Site metadata
 AUTHOR = 'Felix Brunner'
-SITENAME = 'Personal Website'
+SITENAME = 'Felix Brunner'
 SITEURL = 'https://felixbrunner.github.io'
 
 TIMEZONE = 'Europe/London'
@@ -23,6 +23,8 @@ PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'tipue_search',
            'i18n_subsites']
 #PLUGINS = ['i18n_subsites']
+#SITELOGO = 'images/logo.png'
+#SITELOGO_SIZE = None
 '''
 TRIED BEFORE:
  - blueidea: too narrow
@@ -31,16 +33,14 @@ TRIED BEFORE:
  - pelican-bootstrap3: not working
  - zurb-F5-basic: good, basicS
 '''
+
+
 STATIC_PATHS = ['images', 'static']
 #STATIC_PATHS = ['images', 'files', 'extra/robots.txt', 'extra/favicon.ico', 'extra/custom.css', 'extra/@.html', 'extra/~.html', 'extra/in.html', '../CNAME']
 
 EXTRA_PATH_METADATA = {
-    'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/favicon.ico': {'path': 'static/favicon.ico'},
     'extra/custom.css': {'path': 'static/custom.css'},
-    'extra/@.html': {'path': '@.html'},
-    'extra/~.html': {'path': '~.html'},
-    'extra/in.html': {'path': 'in.html'},
     '../CNAME': {'path': 'CNAME'}
     }
 
@@ -53,12 +53,15 @@ DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = True
 TYPOGRIFY = True
 MAIN_MENU = True
-MENUITEMS = (('Home', '/home.html'),
-             ('About me', '/cv.html'),
-             )
+#MENUITEMS = (('Home', '/home.html'),
+#             ('About me', '/cv.html'),
+#             )
 DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
 HIDE_SIDEBAR = True
+
 BANNER = 'images/banner.jpg'
+BANNER_ALL_PAGES = True
+BANNER_SUBTITLE = 'My personal website'
 
 USE_OPEN_GRAPH = True
 OPEN_GRAPH_FB_APP_ID = '202018593182706'
@@ -81,7 +84,8 @@ DEFAULT_PAGINATION = 10
 SHOW_ARTICLE_AUTHOR = True
 SHOW_ARTICLE_CATEGORY = True
 SHOW_DATE_MODIFIED = True
-ARTICLE_EXCLUDES = ['extra']
+#ARTICLE_EXCLUDES = ['extra']
+
 
 # Feed settings
 FEED_ALL_ATOM = None
@@ -132,3 +136,6 @@ PAGE_SAVE_AS = '{slug}.html'
 TAG_SAVE_AS = ''
 CATEGORY_SAVE_AS = ''
 CATEGORIES_SAVE_AS = ''
+
+ABOUT_ME = 'I am me'
+AVATAR = 'images/avatar.png'

@@ -1,1 +1,2 @@
 add favicon.ico
+add logo.png
