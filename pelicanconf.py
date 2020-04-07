@@ -95,14 +95,17 @@ GITHUB_SHOW_USER_LINK = 'true'
 ## links
 LINKS = (#('Name', 'https://url'),
          )
-## social links
+## social links (Name has to be the name of the corresponding FontAwesome icon.)
 SOCIAL = (('Github', 'https://github.com/felixbrunner'),
           ('LinkedIn', 'https://pt.linkedin.com/in/felix-brunner-abbb786a'),
-          ('stackoverflow', 'https://stackoverflow.com/users/10365292/rubelrennfix'),
-          ('E-Mail', 'mailto: user@example.com'),
+          ('stack-overflow', 'https://stackoverflow.com/users/10365292/rubelrennfix'),
+          #('figshare', '###'),
+          #('overleaf', '###'),
+          #('twitter', '###'),
+          ('envelope', 'mailto:user@example.com'),
           )
 ## email
-EMAIL = 'user@example.com'
+#EMAIL = 'user@example.com'
 
 # Analytics & comments settings
 ## Google Analytics
