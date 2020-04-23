@@ -27,10 +27,14 @@ BOOTSTRAP_THEME = None
 BOOTSTRAP_FLUID = False
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
-           'liquid_tags.youtube', 'liquid_tags.vimeo',
-           'liquid_tags.include_code', 'tipue_search',
-           'i18n_subsites']
+PLUGINS = ['liquid_tags.img',
+           'liquid_tags.video',
+           'liquid_tags.youtube',
+           'liquid_tags.vimeo',
+           'liquid_tags.include_code',
+           'tipue_search',
+           'i18n_subsites',
+           'pelican_fontawesome']
 I18N_TEMPLATES_LANG = 'en'
 PYGMENTS_STYLE = 'native'
 
@@ -82,11 +86,11 @@ EXTRA_PATH_METADATA = {'extra/favicon.ico': {'path': 'static/favicon.ico'},
 
 # External services settings
 ## Facebook open graph
-USE_OPEN_GRAPH = True
-OPEN_GRAPH_FB_APP_ID = '202018593182706'
+USE_OPEN_GRAPH = False
+OPEN_GRAPH_FB_APP_ID = ''
 #OPEN_GRAPH_IMAGE = 'images/avatar.png'
 ## twitter
-TWITTER_CARDS = True
+TWITTER_CARDS = False
 ## Github
 GITHUB_USER = 'felixbrunner'
 GITHUB_REPO_COUNT = 3
@@ -96,14 +100,17 @@ GITHUB_SHOW_USER_LINK = 'true'
 LINKS = (#('Name', 'https://url'),
          )
 ## social links (Name has to be the name of the corresponding FontAwesome icon.)
-SOCIAL = (('Github', 'https://github.com/felixbrunner'),
-          ('LinkedIn', 'https://pt.linkedin.com/in/felix-brunner-abbb786a'),
-          ('stack-overflow', 'https://stackoverflow.com/users/10365292/rubelrennfix'),
+SOCIAL = (('Github', 'https://github.com/felixbrunner', 'Github'),
+          ('LinkedIn', 'https://pt.linkedin.com/in/felix-brunner-abbb786a', 'LinkedIn'),
+          ('Xing', 'files/CV.pdf', 'Xing'),
+          ('StackOverflow', 'https://stackoverflow.com/users/10365292/rubelrennfix', 'stack-overflow'),
           #('figshare', '###'),
           #('overleaf', '###'),
           #('twitter', '###'),
-          ('envelope', 'mailto:user@example.com'),
+          ('e-mail', 'mailto:23267@novasbe.pt', 'envelope'), #at
+          ('Resume', 'files/CV.pdf', 'wikipedia-w'), #id-card
           )
+SHOW_SOCIAL_ON_INDEX_PAGE_HEADER = False
 ## email
 #EMAIL = 'user@example.com'
 
@@ -135,11 +142,11 @@ CC_ATTR_MARKUP = True
 # Pelican output settings
 PATH = 'content'
 USE_FOLDER_AS_CATEGORY = True
-DELETE_OUTPUT_DIRECTORY = False
-OUTPUT_RETENTION = ['.git','.jpg','.jpeg','.png','.ico','.pdf']
+DELETE_OUTPUT_DIRECTORY = True
+OUTPUT_RETENTION = ['.git']#,'.jpg','.jpeg','.png','.ico','.pdf']
 OUTPUT_PATH = 'felixbrunner.github.io'
 DEFAULT_PAGINATION = 10
-STATIC_PATHS = ['images', 'static']
+STATIC_PATHS = ['images', 'static', 'files']
 
 
 #MARKDOWN = {
