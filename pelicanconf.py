@@ -9,32 +9,21 @@ DEFAULT_LANG = 'en'
 
 
 # Theme settings
-'''
-THEME attempts:
- - blueidea: too narrow
- - clean-blog: no page
- - flex: clean & minimalistic, icons do not work
- - pelican-bootstrap3: not working
- - zurb-F5-basic: good, basicS
-BOOTSTRAP_THEME attempts:
- - 'readable' # defaults to white with blue
- - 'simplex' # defaults to red
- - 'sandstone' # defaults to light green
- - 'flatly' # defaults to turqoise
-'''
 THEME = 'themes/pelican-bootstrap3'
 BOOTSTRAP_THEME = None
 BOOTSTRAP_FLUID = False
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['liquid_tags.img',
+PLUGINS = [
+           'liquid_tags.img',
            'liquid_tags.video',
            'liquid_tags.youtube',
            'liquid_tags.vimeo',
            'liquid_tags.include_code',
            'tipue_search',
            'i18n_subsites',
-           'pelican_fontawesome']
+           'pelican_fontawesome'
+           ]
 I18N_TEMPLATES_LANG = 'en'
 PYGMENTS_STYLE = 'native'
 
@@ -68,7 +57,7 @@ DISPLAY_RECENT_POSTS_ON_SIDEBAR = False
 RECENT_POST_COUNT = 5
 DISPLAY_ARCHIVE_ON_SIDEBAR = False
 DISPLAY_AUTHORS_ON_SIDEBAR = False
-ABOUT_ME = 'I am me'
+ABOUT_ME = 'I look at data'#'I am me'
 AVATAR = 'images/avatar.png'
 TAG_CLOUD_MAX_ITEMS = 5
 
@@ -102,13 +91,15 @@ LINKS = (#('Name', 'https://url'),
 ## social links (Name has to be the name of the corresponding FontAwesome icon.)
 SOCIAL = (('Github', 'https://github.com/felixbrunner', 'Github'),
           ('LinkedIn', 'https://pt.linkedin.com/in/felix-brunner-abbb786a', 'LinkedIn'),
-          ('Xing', 'files/CV.pdf', 'Xing'),
+          ('Xing', 'https://www.xing.com/profile/Felix_Brunner13/cv', 'Xing'),
           ('StackOverflow', 'https://stackoverflow.com/users/10365292/rubelrennfix', 'stack-overflow'),
+          ('Kaggle', 'https://www.kaggle.com/felixbrunner', 'kaggle'),
           #('figshare', '###'),
           #('overleaf', '###'),
           #('twitter', '###'),
           ('e-mail', 'mailto:23267@novasbe.pt', 'envelope'), #at
           ('Resume', 'files/CV.pdf', 'wikipedia-w'), #id-card
+          ('Academic CV', 'files/curriculum_vitae.pdf', 'wikipedia-w'), #id-card
           )
 SHOW_SOCIAL_ON_INDEX_PAGE_HEADER = False
 ## email
@@ -184,3 +175,18 @@ PAGE_SAVE_AS = '{slug}.html'
 TAG_SAVE_AS = ''
 CATEGORY_SAVE_AS = ''
 CATEGORIES_SAVE_AS = ''
+
+
+'''
+THEME attempts:
+ - blueidea: too narrow
+ - clean-blog: no page
+ - flex: clean & minimalistic, icons do not work
+ - pelican-bootstrap3: not working
+ - zurb-F5-basic: good, basicS
+BOOTSTRAP_THEME attempts:
+ - 'readable' # defaults to white with blue
+ - 'simplex' # defaults to red
+ - 'sandstone' # defaults to light green
+ - 'flatly' # defaults to turqoise
+'''
