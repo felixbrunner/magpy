@@ -90,16 +90,16 @@ LINKS = (#('Name', 'https://url'),
          )
 ## social links (Name has to be the name of the corresponding FontAwesome icon.)
 SOCIAL = (('Github', 'https://github.com/felixbrunner', 'Github'),
-          ('LinkedIn', 'https://pt.linkedin.com/in/felix-brunner-abbb786a', 'LinkedIn'),
+          ('LinkedIn', 'https://pt.linkedin.com/in/brunnerfelix', 'LinkedIn'),
           ('Xing', 'https://www.xing.com/profile/Felix_Brunner13/cv', 'Xing'),
           ('StackOverflow', 'https://stackoverflow.com/users/10365292/rubelrennfix', 'stack-overflow'),
           ('Kaggle', 'https://www.kaggle.com/felixbrunner', 'kaggle'),
           #('figshare', '###'),
           #('overleaf', '###'),
           #('twitter', '###'),
-          ('e-mail', 'mailto:23267@novasbe.pt', 'envelope'), #at
-          ('Resume', 'files/CV.pdf', 'wikipedia-w'), #id-card
-          ('Academic CV', 'files/curriculum_vitae.pdf', 'wikipedia-w'), #id-card
+          ('e-mail', 'mailto:brunner.felix@gmail.com', 'envelope'), #at
+          ('CV', 'files/cv.pdf', 'wikipedia-w'), #id-card
+          ('Academic CV', 'files/academic_cv.pdf', 'wikipedia-w'), #id-card
           )
 SHOW_SOCIAL_ON_INDEX_PAGE_HEADER = False
 ## email
