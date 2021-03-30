@@ -10,7 +10,7 @@ nose==1.3.7
 pelican==4.2.0
 pelican-fontawesome==0.1.0
 pkg-resources==0.0.0
-Pygments==2.7.1
+Pygments==2.7.4
 python-dateutil==2.8.1
 pytz==2020.1
 six==1.15.0
