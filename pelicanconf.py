@@ -1,164 +1,197 @@
-from __future__ import unicode_literals
+# from __future__ import unicode_literals
 
-# Site metadata
-AUTHOR = 'Felix Brunner'
-SITENAME = 'Felix Brunner'
-SITEURL = 'https://felixbrunner.github.io'
-TIMEZONE = 'Europe/London'
-DEFAULT_LANG = 'en'
+# site
+AUTHOR = "Felix Brunner"
+SITENAME = "Felix Brunner"
+# SITEURL = "https://felixbrunner.github.io" # in publishconf.py
+TIMEZONE = "Europe/Berlin"
+DEFAULT_LANG = "en"
+RELATIVE_URLS = True
 
-
-# Theme settings
-THEME = 'themes/pelican-bootstrap3'
+# theme
+THEME = "themes/pelican-bootstrap3"
 BOOTSTRAP_THEME = None
 BOOTSTRAP_FLUID = False
-JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
-PLUGIN_PATHS = ['pelican-plugins']
+JINJA_ENVIRONMENT = {"extensions": ["jinja2.ext.i18n"]}
+PLUGIN_PATHS = ["pelican-plugins"]
 PLUGINS = [
-           'liquid_tags.img',
-           'liquid_tags.video',
-           'liquid_tags.youtube',
-           'liquid_tags.vimeo',
-           'liquid_tags.include_code',
-           'tipue_search',
-           'i18n_subsites',
-           'pelican_fontawesome'
-           ]
-I18N_TEMPLATES_LANG = 'en'
-PYGMENTS_STYLE = 'native'
+    "liquid_tags.img",
+    "liquid_tags.video",
+    "liquid_tags.youtube",
+    "liquid_tags.vimeo",
+    "liquid_tags.include_code",
+    "tipue_search",
+    "i18n_subsites",
+    "pelican_fontawesome",
+]
+I18N_TEMPLATES_LANG = "en"
+PYGMENTS_STYLE = "native"
 
-
-# Template settings
+# template
 BOOTSTRAP_NAVBAR_INVERSE = True
-#SITELOGO = 'images/logo.png' #little logo in top navbar
-#SITELOGO_SIZE = '10px' ??
-DISPLAY_PAGES_ON_MENU = True
-DISPLAY_CATEGORIES_ON_MENU = True
 MAIN_MENU = True
-HIDE_SITENAME = False
-#MENUITEMS = (('Home', '/home.html'),
-#             ('About me', '/cv.html'),
-#             )
-BANNER = 'images/banner.jpg'
+DISPLAY_PAGES_ON_MENU = True
+DISPLAY_CATEGORIES_ON_MENU = False
+HIDE_SITENAME = True
+MENUITEMS = (
+    ("Home", "/index.html"),
+    # ("Categories", "/categories.html"),
+)
+
+# visuals
+BANNER = "assets/images/banner.jpg"
 BANNER_ALL_PAGES = True
-BANNER_SUBTITLE = 'My personal website'
-FAVICON = 'images/avatar.png'#'images/favicon.ico'
+BANNER_SUBTITLE = "My personal website"
+FAVICON = "assets/images/avatar.png"  #'images/favicon.ico'
+# SITELOGO = "images/logo.png"  # little logo in top navbar as home button
+# SITELOGO_SIZE = "20px"  # ??
 
-
-# Sidebar settings
+# sidebar
 HIDE_SIDEBAR = False
 SIDEBAR_ON_LEFT = False
 DISABLE_SIDEBAR_TITLE_ICONS = False
 DISPLAY_TAGS_ON_SIDEBAR = False
 DISPLAY_TAGS_INLINE = False
-TAGS_URL = 'tags.html'
+TAGS_URL = "tags.html"
 DISPLAY_CATEGORIES_ON_SIDEBAR = False
 DISPLAY_RECENT_POSTS_ON_SIDEBAR = False
 RECENT_POST_COUNT = 5
 DISPLAY_ARCHIVE_ON_SIDEBAR = False
 DISPLAY_AUTHORS_ON_SIDEBAR = False
-ABOUT_ME = 'I look at data'#'I am me'
-AVATAR = 'images/avatar.png'
+AVATAR = "assets/images/avatar.png"
+ABOUT_ME = "Researcher in Econometrics and Data Scientist"
 TAG_CLOUD_MAX_ITEMS = 5
 
-
-# Page content settings
+# content
 TYPOGRIFY = True
-DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
-CUSTOM_CSS = 'static/custom.css'
-CUSTOM_JS = 'static/js/custom.js'
-EXTRA_PATH_METADATA = {'extra/favicon.ico': {'path': 'static/favicon.ico'},
-                       'extra/custom.css': {'path': 'static/custom.css'},
-                       'extra/custom.js': {'path': 'static/custom.js'},
-                       }
+DIRECT_TEMPLATES = ("index", "categories", "authors", "archives", "search")
+CUSTOM_CSS = "static/custom.css"
+CUSTOM_JS = "static/js/custom.js"
+EXTRA_PATH_METADATA = {
+    "extra/favicon.ico": {"path": "static/favicon.ico"},
+    "extra/custom.css": {"path": "static/custom.css"},
+    "extra/custom.js": {"path": "static/custom.js"},
+}
 
-
-# External services settings
-## Facebook open graph
+# facebook open graph
 USE_OPEN_GRAPH = False
-OPEN_GRAPH_FB_APP_ID = ''
-#OPEN_GRAPH_IMAGE = 'images/avatar.png'
-## twitter
+OPEN_GRAPH_FB_APP_ID = ""
+# OPEN_GRAPH_IMAGE = 'images/avatar.png'
+
+# twitter
 TWITTER_CARDS = False
-## Github
-GITHUB_USER = 'felixbrunner'
+
+# github
+GITHUB_USER = "felixbrunner"
 GITHUB_REPO_COUNT = 3
-GITHUB_SKIP_FORK = 'true'
-GITHUB_SHOW_USER_LINK = 'true'
-## links
-LINKS = (#('Name', 'https://url'),
-         )
-## social links (Name has to be the name of the corresponding FontAwesome icon.)
-SOCIAL = (('Github', 'https://github.com/felixbrunner', 'Github'),
-          ('LinkedIn', 'https://pt.linkedin.com/in/brunnerfelix', 'LinkedIn'),
-          ('Xing', 'https://www.xing.com/profile/Felix_Brunner13/cv', 'Xing'),
-          ('StackOverflow', 'https://stackoverflow.com/users/10365292/rubelrennfix', 'stack-overflow'),
-          ('Kaggle', 'https://www.kaggle.com/felixbrunner', 'kaggle'),
-          #('figshare', '###'),
-          #('overleaf', '###'),
-          #('twitter', '###'),
-          ('e-mail', 'mailto:brunner.felix@gmail.com', 'envelope'), #at
-          ('CV', 'files/cv.pdf', 'wikipedia-w'), #id-card
-          ('Academic CV', 'files/academic_cv.pdf', 'wikipedia-w'), #id-card
-          )
+GITHUB_SKIP_FORK = "true"
+GITHUB_SHOW_USER_LINK = "true"
+
+# links
+SOCIAL = (
+    (
+        "e-mail",
+        "mailto:brunner.felix@gmail.com",
+        "envelope",
+    ),  # at
+    # (
+    #     "Github",
+    #     "https://github.com/felixbrunner",
+    # ),
+    (
+        "LinkedIn",
+        "https://pt.linkedin.com/in/brunnerfelix",
+    ),
+    (
+        "Xing",
+        "https://www.xing.com/profile/Felix_Brunner13/cv",
+    ),
+    # (
+    #     "StackOverflow",
+    #     "https://stackoverflow.com/users/10365292/rubelrennfix",
+    #     "stack-overflow",
+    # ),
+    # (
+    #     '<span class="fa fa-code"></span>   Kaggle',
+    #     "https://www.kaggle.com/felixbrunner",
+    #     "code",
+    # ),
+    # ('figshare', '###'),
+    # ('overleaf', '###'),
+    # ('twitter', '###'),
+)  ## social links (Name has to be the name of the corresponding FontAwesome icon.)
+LINKS = (
+    (
+        '<span class="fa fa-address-card"></span>&ensp;CV',
+        "assets/files/cv.pdf",
+    ),
+    (
+        '<span class="fa fa-graduation-cap"></span>&ensp;Academic CV',
+        "assets/files/academic_cv.pdf",
+    ),
+)
 SHOW_SOCIAL_ON_INDEX_PAGE_HEADER = False
-## email
-#EMAIL = 'user@example.com'
 
-# Analytics & comments settings
-## Google Analytics
-#GOOGLE_ANALYTICS = ''
-#GOOGLE_ANALYTICS_UNIVERSAL = ''
-#GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY = ''
-## disqus
-#DISQUS_SITENAME = ''
-#DISQUS_ID_PREFIX_SLUG = False
-#DISQUS_NO_ID = False
-#DISQUS_DISPLAY_COUNTS = True
-## addthis
-#ADDTHIS_PROFILE = 'ra-520d4af6518bf3c7'
+# email
+# EMAIL = "user@example.com"
+
+# google analytics
+# GOOGLE_ANALYTICS = ''
+# GOOGLE_ANALYTICS_UNIVERSAL = ''
+# GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY = ''
+
+# disqus (comment section for articles)
+# DISQUS_SITENAME = ''
+# DISQUS_ID_PREFIX_SLUG = False
+# DISQUS_NO_ID = False
+# DISQUS_DISPLAY_COUNTS = True
+
+# addthis
+# ADDTHIS_PROFILE = 'ra-520d4af6518bf3c7'
+
 ## piwik
-#PIWIK_URL = ''
-#PIWIK_SSL_URL = ''
-#PIWIK_SITE_ID = ''
+# PIWIK_URL = ''
+# PIWIK_SSL_URL = ''
+# PIWIK_SITE_ID = ''
 
-
-# Content license settings
-#CC_LICENSE = "CC-BY-NC-SA" # use alternative below
-CC_LICENSE_DERIVATIVES = "ShareAlike" #"yes","no"
-CC_LICENSE_COMMERCIAL = "no" #"yes"
+# content license
+# CC_LICENSE = "CC-BY-NC-SA" # use alternative below
+CC_LICENSE_DERIVATIVES = "ShareAlike"  # "yes","no"
+CC_LICENSE_COMMERCIAL = "no"  # "yes"
 CC_ATTR_MARKUP = True
 
-
-# Pelican output settings
-PATH = 'content'
-USE_FOLDER_AS_CATEGORY = True
+# pelican output
+PATH = "content"
+USE_FOLDER_AS_CATEGORY = False
 DELETE_OUTPUT_DIRECTORY = True
-OUTPUT_RETENTION = ['.git']#,'.jpg','.jpeg','.png','.ico','.pdf']
-OUTPUT_PATH = 'felixbrunner.github.io'
+OUTPUT_RETENTION = [".git"]  # ,'.jpg','.jpeg','.png','.ico','.pdf']
+OUTPUT_PATH = "felixbrunner.github.io"
+DEFAULT_ORPHANS = 1
 DEFAULT_PAGINATION = 10
-STATIC_PATHS = ['images', 'static', 'files']
-
-
-#MARKDOWN = {
+STATIC_PATHS = [
+    "assets",
+    "static",
+    # "images",
+    # "files",
+]
+# markown
+# MARKDOWN = {
 #  'extension_configs': {
 #        'markdown.extensions.codehilite': {'css_class': 'highlight'},
 #        'markdown.extensions.extra': {},
 #        'markdown.extensions.headerid': {},
 #  },
 #  'output_format': 'html5',
-#}
+# }
 
-
-# Article settings
-SHOW_ARTICLE_AUTHOR = True
+# articles
 SHOW_ARTICLE_CATEGORY = True
-SHOW_DATE_MODIFIED = True
-#ARTICLE_EXCLUDES = ['extra']
-#DISPLAY_ARTICLE_INFO_ON_INDEX  = None
+SHOW_ARTICLE_AUTHOR = False
+SHOW_DATE_MODIFIED = False
+DISPLAY_ARTICLE_INFO_ON_INDEX = False
+ARTICLE_EXCLUDES = ["extra"]
 
-
-# Feed settings
+# feed
 FEED_ALL_ATOM = None
 FEED_ALL_RSS = None
 CATEGORY_FEED_ATOM = None
@@ -166,18 +199,16 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-
-# name settings
-ARTICLE_URL = 'blog/{slug}.html'
-ARTICLE_SAVE_AS = 'blog/{slug}.html'
-PAGE_URL = '{slug}.html'
-PAGE_SAVE_AS = '{slug}.html'
-TAG_SAVE_AS = ''
-CATEGORY_SAVE_AS = ''
-CATEGORIES_SAVE_AS = ''
+# structure
+ARTICLE_URL = "blog/{slug}.html"
+ARTICLE_SAVE_AS = "blog/{slug}.html"
+PAGE_URL = "{slug}.html"
+PAGE_SAVE_AS = "{slug}.html"
+CATEGORIES_URL = "categories.html"
+CATEGORIES_SAVE_AS = "categories.html"
 
 
-'''
+"""
 THEME attempts:
  - blueidea: too narrow
  - clean-blog: no page
@@ -189,4 +220,4 @@ BOOTSTRAP_THEME attempts:
  - 'simplex' # defaults to red
  - 'sandstone' # defaults to light green
  - 'flatly' # defaults to turqoise
-'''
+"""

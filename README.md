@@ -1,24 +1,17 @@
-# Pelican for Python directory for personal website
+# Pelican for Python directory for my personal website
 
-This is my personal site. It has been built with Pelican, using the Pelican Boostrap 3 theme.
+This repository generates my website. It is built with Pelican, and currently uses the Pelican Boostrap 3 theme.
 
 ## Create Output
-Run the following command in the anaconda command line to assemble the website in the HTML submodule:
+The Makefile contains several options to generate the HTML output.
+- make compile: compile the static files for the website once
+- make regenerate: keep compiling the website when there is a content change
+- make localhost: set up a local test website that updates its content
+- make publish (not tested): compile website and push to github pages
 
-```
-pelican -s pelicanconf.py
-```
+## Alternative Preview Method
+- go to output path
+- set up virtual server `python -m http.server`
+- open [localhost:8000](http://localhost:8000/) in browser
 
-## Preview
-
-go to output path
-```
-cd ./felixbrunner.github.io
-```
-set up virtual server
-```
-python -m http.server
-```
-open in browser
-
-http://localhost:8000/
+<!-- RENAME TO BEEWITS -->

@@ -1,82 +1,43 @@
-PY?=python3
-PELICAN?=pelican
-PELICANOPTS=
-
-BASEDIR=$(CURDIR)
-INPUTDIR=$(BASEDIR)/content
-OUTPUTDIR=$(BASEDIR)/output
-CONFFILE=$(BASEDIR)/pelicanconf.py
-PUBLISHCONF=$(BASEDIR)/publishconf.py
-
-GITHUB_PAGES_BRANCH=gh-pages
-
-
-DEBUG ?= 0
-ifeq ($(DEBUG), 1)
-	PELICANOPTS += -D
-endif
-
-RELATIVE ?= 0
-ifeq ($(RELATIVE), 1)
-	PELICANOPTS += --relative-urls
-endif
 
 help:
-	@echo 'Makefile for a pelican Web site                                           '
+	@echo 'Makefile for pelican website                                              '
 	@echo '                                                                          '
 	@echo 'Usage:                                                                    '
-	@echo '   make html                           (re)generate the web site          '
-	@echo '   make clean                          remove the generated files         '
-	@echo '   make regenerate                     regenerate files upon modification '
-	@echo '   make publish                        generate using production settings '
-	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000'
-	@echo '   make serve-global [SERVER=0.0.0.0]  serve (as root) to $(SERVER):80    '
-	@echo '   make devserver [PORT=8000]          serve and regenerate together      '
-	@echo '   make ssh_upload                     upload the web site via SSH        '
-	@echo '   make rsync_upload                   upload the web site via rsync+ssh  '
-	@echo '   make github                         upload the web site via gh-pages   '
-	@echo '                                                                          '
-	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
-	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
+	@echo '   make install                        install all necessary dependencies '   
+	@echo '   make requirements                   compile requirements.txt           '
+	@echo '   make compile                        generate the web site once         '
+	@echo '   make regenerate                     regenerate the web site upon change'
+	@echo '   make publish                        publish on github pages            '
+	@echo '   make localhost                      serve site at http://localhost:8000'
+	@echo '   make publish                        upload the web site via gh-pages   '
 	@echo '                                                                          '
 
-html:
-	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+install:
+	pip install --upgrade pip wheel pip-tools
+	pip-sync requirements/requirements.txt
+	# pip install -e .
 
-clean:
-	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
+requirements:
+	pip install pip-tools
+	pip-compile requirements.in
+
+compile:
+	pelican $(CURDIR)/content -s pelicanconf.py -o $(CURDIR)/felixbrunner.github.io
 
 regenerate:
-	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	pelican -r $(CURDIR)/content -s pelicanconf.py -o $(CURDIR)/felixbrunner.github.io
 
-serve:
-ifdef PORT
-	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT)
-else
-	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
-endif
-
-serve-global:
-ifdef SERVER
-	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT) -b $(SERVER)
-else
-	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT) -b 0.0.0.0
-endif
-
-
-devserver:
-ifdef PORT
-	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT)
-else
-	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
-endif
+localhost:
+	pelican -lr $(CURDIR)/content -s pelicanconf.py --relative-urls -o $(CURDIR)/felixbrunner.github.io -p 8000
 
 publish:
-	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+	pelican $(CURDIR)/content -s publishconf.py -o $(CURDIR)/felixbrunner.github.io
+	cd ./felixbrunner.github.io
+	git add .
+	git checkout -b make-publish
+	git commit -m "make publish"
+	git push origin/make-publish
+	# create mr
+	cd ..
 
-github: publish
-	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
-	git push origin $(GITHUB_PAGES_BRANCH)
-
-
-.PHONY: html help clean regenerate serve serve-global devserver publish github
+.PHONY: install requirements compile regenerate localhost publish
