@@ -1,0 +1,5 @@
+pelican
+pelican-fontawesome
+typogrify
+markdown
+-e "git+https://github.com/getpelican/pelican-plugins/#egg=pelican-tipue-search&subdirectory=tipue_search"
