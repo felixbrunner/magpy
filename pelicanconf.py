@@ -9,7 +9,7 @@ DEFAULT_LANG = "en"
 RELATIVE_URLS = True
 
 # theme
-THEME = "themes/pelican-bootstrap3"
+THEME = "pelican-themes/pelican-bootstrap3"
 BOOTSTRAP_THEME = None
 BOOTSTRAP_FLUID = False
 JINJA_ENVIRONMENT = {"extensions": ["jinja2.ext.i18n"]}
