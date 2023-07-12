@@ -16,10 +16,12 @@ install:
 	pip install --upgrade pip wheel pip-tools
 	pip-sync requirements/requirements.txt
 	# pip install -e .
+	git clone https://github.com/getpelican/pelican-themes.git
+	git clone https://github.com/getpelican/pelican-plugins.git
 
 requirements:
 	pip install pip-tools
-	pip-compile requirements.in
+	pip-compile requirements/requirements.in
 
 compile:
 	pelican $(CURDIR)/content -s pelicanconf.py -o $(CURDIR)/felixbrunner.github.io
