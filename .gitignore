@@ -1,14 +1,9 @@
-# Ignore output folder
+# ignore these folders
+output/
 felixbrunner.github.io/
-
-# Ignore theme folder
 pelican-themes/
-
-# Ignore plugins folder
 pelican-plugins/
-
-# Ignore HTML files
-*.html
-
-# ignore venv
 .venv/
+
+# ignore these filetypes
+*.html

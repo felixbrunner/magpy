@@ -1,19 +1,13 @@
-"""
-This file is used as the configuration file when publishing.
+"""This file is used as the configuration file when publishing.
 It will import all settings in pelicanconf.py, then modify or extend them.
 
+This file is only used if you use `make publish` or
+explicitly specify it as your config file.
 """
-from pelicanconf import *
-
-#!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-# from __future__ import unicode_literals
-
-# This file is only used if you use `make publish` or
-# explicitly specify it as your config file.
-
+from beewits.pelicanconf import *
 # import os
 # import sys
+# from __future__ import unicode_literals
 
 # sys.path.append(os.curdir)
 
@@ -21,9 +15,8 @@ from pelicanconf import *
 SITEURL = "https://felixbrunner.github.io/"
 RELATIVE_URLS = False
 
-
-FEED_ALL_ATOM = "feeds/all.atom.xml"
-CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
+# FEED_ALL_ATOM = "feeds/all.atom.xml"
+# CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 
 DELETE_OUTPUT_DIRECTORY = True
 

@@ -1,26 +1,26 @@
-# from __future__ import unicode_literals
-
-# site
-AUTHOR = "Felix Brunner"
-SITENAME = "Felix Brunner"
-# SITEURL = "https://felixbrunner.github.io" # in publishconf.py
-TIMEZONE = "Europe/Berlin"
-DEFAULT_LANG = "en"
+# site settings
+AUTHOR = 'Felix Brunner'
+SITENAME = 'Felix Brunner'
+SITEURL = ''
+TIMEZONE = 'Europe/Berlin'
+PATH = 'content'
+DEFAULT_LANG = 'en'
 RELATIVE_URLS = True
+DEFAULT_PAGINATION = 10
 
 # theme
-THEME = "pelican-themes/pelican-bootstrap3"
+THEME = "../pelican-themes/pelican-bootstrap3"
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 BOOTSTRAP_THEME = None
 BOOTSTRAP_FLUID = False
-JINJA_ENVIRONMENT = {"extensions": ["jinja2.ext.i18n"]}
-PLUGIN_PATHS = ["pelican-plugins"]
+PLUGIN_PATHS = ["../pelican-plugins"]
 PLUGINS = [
-    "liquid_tags.img",
-    "liquid_tags.video",
-    "liquid_tags.youtube",
-    "liquid_tags.vimeo",
-    "liquid_tags.include_code",
-    "tipue_search",
+    # "liquid_tags.img",
+    # "liquid_tags.video",
+    # "liquid_tags.youtube",
+    # "liquid_tags.vimeo",
+    # "liquid_tags.include_code",
+    # "tipue_search",
     "i18n_subsites",
     "pelican_fontawesome",
 ]
@@ -65,12 +65,12 @@ TAG_CLOUD_MAX_ITEMS = 5
 # content
 TYPOGRIFY = True
 DIRECT_TEMPLATES = ("index", "categories", "authors", "archives", "search")
-CUSTOM_CSS = "static/custom.css"
-CUSTOM_JS = "static/js/custom.js"
+CUSTOM_CSS = "../static/custom.css"
+# CUSTOM_JS = "../static/js/custom.js"
 EXTRA_PATH_METADATA = {
-    "extra/favicon.ico": {"path": "static/favicon.ico"},
-    "extra/custom.css": {"path": "static/custom.css"},
-    "extra/custom.js": {"path": "static/custom.js"},
+    "extra/favicon.ico": {"path": "../static/favicon.ico"},
+    "extra/custom.css": {"path": "../static/custom.css"},
+    # "extra/custom.js": {"path": "../static/custom.js"},
 }
 
 # facebook open graph
@@ -87,50 +87,57 @@ GITHUB_REPO_COUNT = 3
 GITHUB_SKIP_FORK = "true"
 GITHUB_SHOW_USER_LINK = "true"
 
+# # Feed generation is usually not desired when developing
+# FEED_ALL_ATOM = None
+# CATEGORY_FEED_ATOM = None
+# TRANSLATION_FEED_ATOM = None
+# AUTHOR_FEED_ATOM = None
+# AUTHOR_FEED_RSS = None
+
 # links
 SOCIAL = (
-    (
-        "e-mail",
-        "mailto:brunner.felix@gmail.com",
-        "envelope",
-    ),  # at
     # (
-    #     "Github",
-    #     "https://github.com/felixbrunner",
-    # ),
-    (
-        "LinkedIn",
-        "https://pt.linkedin.com/in/brunnerfelix",
-    ),
-    (
-        "Xing",
-        "https://www.xing.com/profile/Felix_Brunner13/cv",
-    ),
+    #     "e-mail",
+    #     "mailto:brunner.felix@gmail.com",
+    #     "envelope",
+    # ),  # at
+    # # (
+    # #     "Github",
+    # #     "https://github.com/felixbrunner",
+    # # ),
     # (
-    #     "StackOverflow",
-    #     "https://stackoverflow.com/users/10365292/rubelrennfix",
-    #     "stack-overflow",
+    #     "LinkedIn",
+    #     "https://pt.linkedin.com/in/brunnerfelix",
     # ),
     # (
-    #     '<span class="fa fa-code"></span>   Kaggle',
-    #     "https://www.kaggle.com/felixbrunner",
-    #     "code",
+    #     "Xing",
+    #     "https://www.xing.com/profile/Felix_Brunner13/cv",
     # ),
-    # ('figshare', '###'),
-    # ('overleaf', '###'),
-    # ('twitter', '###'),
-)  ## social links (Name has to be the name of the corresponding FontAwesome icon.)
+    # # (
+    # #     "StackOverflow",
+    # #     "https://stackoverflow.com/users/10365292/rubelrennfix",
+    # #     "stack-overflow",
+    # # ),
+    # # (
+    # #     '<span class="fa fa-code"></span>   Kaggle',
+    # #     "https://www.kaggle.com/felixbrunner",
+    # #     "code",
+    # # ),
+    # # ('figshare', '###'),
+    # # ('overleaf', '###'),
+    # # ('twitter', '###'),
+) ## social links (Name has to be the name of the corresponding FontAwesome icon.)
 LINKS = (
-    (
-        '<span class="fa fa-address-card"></span>&ensp;CV',
-        "assets/files/cv.pdf",
-    ),
-    (
-        '<span class="fa fa-graduation-cap"></span>&ensp;Academic CV',
-        "assets/files/academic_cv.pdf",
-    ),
+    # (
+    #     '<span class="fa fa-address-card"></span>&ensp;CV',
+    #     "assets/files/cv.pdf",
+    # ),
+    # (
+    #     '<span class="fa fa-graduation-cap"></span>&ensp;Academic CV',
+    #     "assets/files/academic_cv.pdf",
+    # ),
 )
-SHOW_SOCIAL_ON_INDEX_PAGE_HEADER = False
+# SHOW_SOCIAL_ON_INDEX_PAGE_HEADER = False
 
 # email
 # EMAIL = "user@example.com"
@@ -165,7 +172,7 @@ PATH = "content"
 USE_FOLDER_AS_CATEGORY = False
 DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_RETENTION = [".git"]  # ,'.jpg','.jpeg','.png','.ico','.pdf']
-OUTPUT_PATH = "felixbrunner.github.io"
+# OUTPUT_PATH = "felixbrunner.github.io"
 DEFAULT_ORPHANS = 1
 DEFAULT_PAGINATION = 10
 STATIC_PATHS = [
