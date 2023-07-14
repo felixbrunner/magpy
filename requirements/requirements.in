@@ -1,5 +1,8 @@
-pelican
+pelican[markdown]
 pelican-fontawesome
 typogrify
-markdown
--e "git+https://github.com/getpelican/pelican-plugins/#egg=pelican-tipue-search&subdirectory=tipue_search"
+ghp-import
+setuptools
+flake8-black
+black
+isort
