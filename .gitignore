@@ -3,7 +3,12 @@ output/
 felixbrunner.github.io/
 pelican-themes/
 pelican-plugins/
+
+# system folders
 .venv/
+*.egg-info/
+*__pycache__/
 
 # ignore these filetypes
 *.html
+*.pyc
