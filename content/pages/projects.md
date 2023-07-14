@@ -1,46 +1,47 @@
 Title: Projects
 Date: 2020-01-01 12:00
-Modified: 2022-03-13 18:00
+Modified: 2023-07-13 18:00
 Category: General
 Tags:
 Slug: projects
 Authors: Felix Brunner
 Summary:
 
-## Academic Research
+<!-- ## Academic Research -->
 
-### Estimating Large-Dimensional Connectedness Tables: The Great Moderation through the Lens of Sectoral Spillovers
-joint work with [Ruben Hipp](https://sites.google.com/view/rubenhipp/home), submitted
+## Estimating large-dimensional connectedness tables: The Great Moderation through the lens of sectoral spillovers
+joint work with [Ruben Hipp](https://sites.google.com/view/rubenhipp/home), forthcoming in _Quantitative Economics_
 
-the latest version can be downloaded [here](https://www.econstor.eu/bitstream/10419/247417/1/swp2021-37.pdf)
+the latest version can be downloaded [here](https://www.econometricsociety.org/publications/quantitative-economics/forthcoming-papers/0000/00/00/Estimating-Large-Dimensional-Connectedness-Tables-The-Great-Moderation-through-the-Lens-of-Sectoral-Spillovers/file/1947-3.pdf)
 
-#### Abstract
+### Abstract
 We estimate sectoral spillovers around the Great Moderation with the help of forecast error variance decomposition tables.
-Obtaining such tables in high dimensions is challenging since they are functions of the estimated vector autoregressive coefficients and the residual covariance matrix.
-In a simulation study, we compare various regularization methods for both and conduct a comprehensive analysis of their performance.
-We show that standard estimators of large connectedness tables lead to biased results and high estimation uncertainty, which can both be mitigated by regularization.
-To explore possible causes for the Great Moderation, we apply a cross-validated estimator on sectoral spillovers of industrial production in the US from 1972 to 2007.
-We find that a handful of sectors considerably decreased their outgoing links, which hints at a complimentary explanation for the Great Moderation.
+Obtaining such tables in high dimensions is challenging because they are functions of the estimated vector autoregressive coefficients and the residual covariance matrix.
+In a simulation study, we compare various regularization methods on both and conduct a comprehensive analysis of their performance.
+We show that standard estimators of large connectedness tables lead to biased results and high estimation uncertainty, both of which are mitigated by regularization.
+To explore possible causes for the Great Moderation, we apply a cross-validated estimator on sectoral spillovers of industrial production in the US from 1972 to 2019.
+We find that the spillover network has considerably weakened, which hints at structural change, for example, through improved inventory management, as a critical explanation for the Great Moderation.
 
 <br/>
 
-### The Granular Origins of Asset Prices
+## Echo-nomics: Do market returns resonate with granular innovations?
 joint work with [Ruben Hipp](https://sites.google.com/view/rubenhipp/home)
 
-#### Abstract
-We investigate the implications of the granular hypothesis of Gabaix (2011) on asset prices.
-In this framework, non-systematic shocks to US equities can have aggregate effects due to at least one of two reasons: (1) index weights are too concentrated for diversification arguments to apply, or (2) a spillover network propagates the shock to a large portion of investor wealth.
-We estimate spillover networks of non-systematic variances for the 100 largest US equities.
-The estimated networks describe how non-systematic variations are transmitted between assets, a channel that factor asset pricing models are unable to capture.
-To construct network connectedness tables from daily variance observations, we use forecast error variance decompositions together with regularisation techniques for large-dimensional estimation.
-We document the evolution of descriptive network statistics over time and collect first evidence on the networks' usefulness in forecasting variances and returns.
+### Abstract
+This paper investigates the interplay between asset-level innovations and aggregate market variation through the lens of a directed spillover network.
+Utilizing high-dimensional samples with daily data of 100 US stocks, we probe the ``granular hypothesis'' in a network setting and explore two key aspects.
+First, we establish the presence and dynamics of a directed spillover network in asset markets, demonstrating the potential for granular innovations to propagate in the cross-section of stocks.
+We find that spillover intensity and assets' relative importance are fast-changing and usually short-lived.
+Second, we test whether such a spillover network, combined with a concentrated size distribution, enable granular shocks to significantly influence aggregate market outcomes.
+The results indicate a positive significant effect from micro innovations to the aggregate market index.
+Thus, both findings bring into focus a potential missing link in financial market models –- the inter-asset spillover network -- which helps to connect micro-economic narratives to macro-financial outcomes.
 
 <br/>
 
-### Dynamic Density Forecasting with Hidden Markov Models
+## Dynamic density forecasting with Hidden Markov Models
 in development
 
-#### Abstract
+### Abstract
 We demonstrate how dynamic probability densities can be obtained from the encompassing class of Hidden Markov Models.
 Density forecasts under such models cover a wide range of shapes that evolve following the model dynamics.
 We then benchmark the HMMs’ capabilities to model data generating distributions in-sample and out-of-sample in a simulation study.
@@ -48,8 +49,14 @@ Finally, we apply the model to real-world financial and economic data.
 
 <br/>
 
-## Under Construction
+## Granular risk premia
+in development
 
-![construction](../assets/images/construction.png)
+### Abstract
+I investigate the implications of the granular hypothesis of \cite{gabaix2011granular} on asset prices.
+In a network connectedness model, granular innovations to US equity prices can have systemic effects due to at least one of two reasons: (1) index weights are too concentrated for diversification arguments to apply, or (2) spillovers propagate non-systematic innovations to a large portion of investor wealth.
+I show theoretically that such effects can have implications for expected asset returns and empirically investigate their quantitative relevance, using spillover networks of 100 equities.
+While most of the time, there are no assets that amount to significant systemic importance, we show that exposure to assets with impact on investor wealth prices is priced temporarily into the cross-section of stock returns.
+Further, our analysis uncovers risk premia of 2\% to 3\% for the assets with the biggest impact on investor wealth and a strategy that seeks exposure to such risk premia achieves a Sharpe ratio above 0.5.
 
 <br/>

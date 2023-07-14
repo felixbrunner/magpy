@@ -9,4 +9,4 @@ Summary: This is a short post to point out that the website is under constructio
 
 ## _Under construction_
 
-![construction](../images/construction.png)
+![construction](../assets/images/construction.png)

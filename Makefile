@@ -10,9 +10,10 @@ CONFFILE=$(BASEDIR)/beewits/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/beewits/publishconf.py
 
 # github pages
-GITHUB_PAGES_BRANCH=gh-pages
+GITHUB_PAGES_BRANCH=user-page
 GITHUB_USER_PAGE=git@github.com:felixbrunner/felixbrunner.github.io.git
 GITHUB_USER_PAGE_BRANCH=master
+GITHUB_USER_PAGE_REMOTE=$(GITHUB_USER_PAGE)/$(GITHUB_USER_PAGE_BRANCH)
 
 help:
 	@echo 'Makefile for pelican website                                              '
@@ -54,8 +55,19 @@ localhost:
 	pelican -lr $(CURDIR)/content -s "$(CONFFILE)" --relative-urls -o "$(OUTPUTDIR)" -p 7931
 
 publish:
+	cd ./felixbrunner.github.io
+	git pull
+	cd ..
 	pelican "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
-	ghp-import "$(OUTPUTDIR)" -b $(GITHUB_PAGES_BRANCH) -m "publish updated pelican generated site"
-	git push $(GITHUB_USER_PAGE) $(GITHUB_PAGES_BRANCH):$(GITHUB_USER_PAGE_BRANCH)
+	cd ./felixbrunner.github.io
+	git add .
+	git commit -m "ublish updated pelican generated site"
+	git push
+
+
+	# ghp-import -o "$(OUTPUTDIR)" -b $(GITHUB_PAGES_BRANCH) -m "publish updated pelican generated site"
+	# git push -f $(GITHUB_USER_PAGE) $(GITHUB_PAGES_BRANCH):$(GITHUB_USER_PAGE_BRANCH)
+	# ghp-import -o "$(OUTPUTDIR)" -b $(GITHUB_PAGES_BRANCH) -m "publish updated pelican generated site" \
+	#   -r $(GITHUB_USER_PAGE_REMOTE) -f
 
 .PHONY: install requirements compile clear regenerate localhost publish

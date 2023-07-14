@@ -12,3 +12,4 @@ pelican-plugins/
 # ignore these filetypes
 *.html
 *.pyc
+*Zone.Identifier
