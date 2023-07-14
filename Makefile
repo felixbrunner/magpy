@@ -12,7 +12,7 @@ PUBLISHCONF=$(BASEDIR)/beewits/publishconf.py
 # github pages
 GITHUB_PAGES_BRANCH=user-page
 GITHUB_USER_PAGE=git@github.com:felixbrunner/felixbrunner.github.io.git
-GITHUB_USER_PAGE_BRANCH=master
+GITHUB_USER_PAGE_BRANCH=main
 GITHUB_USER_PAGE_REMOTE=$(GITHUB_USER_PAGE)/$(GITHUB_USER_PAGE_BRANCH)
 
 help:
@@ -36,7 +36,7 @@ install:
 	pip install -e .
 	if ! [ -d "./pelican-themes" ]; then git clone https://github.com/getpelican/pelican-themes; fi
 	if ! [ -d "./pelican-plugins" ]; then git clone https://github.com/getpelican/pelican-plugins; fi
-	if ! [ -d "./felixbrunner.github.io" ]; then git clone git@github.com:felixbrunner/felixbrunner.github.io.git; fi
+	git fetch $(GITHUB_USER_PAGE) $(GITHUB_USER_PAGE_BRANCH):$(GITHUB_PAGES_BRANCH)
 
 requirements:
 	pip install pip-tools
@@ -55,19 +55,8 @@ localhost:
 	pelican -lr $(CURDIR)/content -s "$(CONFFILE)" --relative-urls -o "$(OUTPUTDIR)" -p 7931
 
 publish:
-	cd ./felixbrunner.github.io
-	git pull
-	cd ..
 	pelican "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
-	cd ./felixbrunner.github.io
-	git add .
-	git commit -m "ublish updated pelican generated site"
-	git push
-
-
-	# ghp-import -o "$(OUTPUTDIR)" -b $(GITHUB_PAGES_BRANCH) -m "publish updated pelican generated site"
-	# git push -f $(GITHUB_USER_PAGE) $(GITHUB_PAGES_BRANCH):$(GITHUB_USER_PAGE_BRANCH)
-	# ghp-import -o "$(OUTPUTDIR)" -b $(GITHUB_PAGES_BRANCH) -m "publish updated pelican generated site" \
-	#   -r $(GITHUB_USER_PAGE_REMOTE) -f
+	ghp-import -o "$(OUTPUTDIR)" -b $(GITHUB_PAGES_BRANCH) -m "publish updated pelican generated site"
+	git push $(GITHUB_USER_PAGE) $(GITHUB_PAGES_BRANCH):$(GITHUB_USER_PAGE_BRANCH)
 
 .PHONY: install requirements compile clear regenerate localhost publish
