@@ -12,7 +12,7 @@ Summary:
 ## Estimating large-dimensional connectedness tables: The Great Moderation through the lens of sectoral spillovers
 joint work with [Ruben Hipp](https://sites.google.com/view/rubenhipp/home), forthcoming in _Quantitative Economics_
 
-the latest version can be downloaded [here](hhttps://www.econometricsociety.org/publications/quantitative-economics/2023/07/01/Estimating-Large-Dimensional-Connectedness-Tables-The-Great-Moderation-through-the-Lens-of-Sectoral-Spillovers/file/quan200284.pdf)
+the latest version can be downloaded [here](https://www.econometricsociety.org/publications/quantitative-economics/2023/07/01/Estimating-Large-Dimensional-Connectedness-Tables-The-Great-Moderation-through-the-Lens-of-Sectoral-Spillovers)
 
 ### Abstract
 We estimate sectoral spillovers around the Great Moderation with the help of forecast error variance decomposition tables.
