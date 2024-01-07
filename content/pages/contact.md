@@ -7,7 +7,8 @@ Slug: contact
 Authors: Felix Brunner
 Summary:
 
-I live in Berlin and frequently visit Lisbon. Feel free to approach me with any questions or suggestions!
+I live in Berlin and am interested in project touching the subjects of data science and artificial intelligence. Feel free to approach me with any questions or suggestions!
+
 ## Get in touch
 <ul class="list-group social">
   <li class="list-group-item"><a href="http://www.linkedin.com/in/felix-brunner-abbb786a"><i class="fa fa-linkedin-square fa-lg"></i> linkedin</a></li>

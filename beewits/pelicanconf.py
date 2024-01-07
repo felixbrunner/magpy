@@ -59,7 +59,7 @@ RECENT_POST_COUNT = 5
 DISPLAY_ARCHIVE_ON_SIDEBAR = False
 DISPLAY_AUTHORS_ON_SIDEBAR = False
 AVATAR = "assets/images/avatar.png"
-ABOUT_ME = "Researcher in Econometrics and Data Scientist"
+ABOUT_ME = "Data Scientist and Researcher in Econometrics"
 TAG_CLOUD_MAX_ITEMS = 5
 
 # content
