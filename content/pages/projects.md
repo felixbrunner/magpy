@@ -24,7 +24,7 @@ My role in this project was mainly in conceptualizing and implementing **data pi
 Details about the employed **model architecture** can be found in a three-part article ([here](https://medium.com/dida-machine-learning/explainable-time-series-classification-with-x-rocket-3087b912a08d?source=friends_link&sk=c9e42fa9bfe32cd58f804673ca5aef8c), [here](https://medium.com/dida-machine-learning/inside-x-rocket-explaining-the-explainable-rocket-534b104c4a08?source=friends_link&sk=4222cf1591d49181eff368f97d0bdee0) and [here](https://medium.com/dida-machine-learning/x-rocket-to-the-moon-c2848e740243?source=friends_link&sk=a8428dac4867839dc22007196c6a4f87)), and in the belonging [code repository](https://github.com/dida-do/xrocket).
 
 <!-- <p align="center"><img src="https://miro.medium.com/v2/resize:fit:1268/format:webp/1*9Xopehn3Z_V8aCr-ZVGCzQ.png" alt="drawing" width="700"/></p> -->
-<p align="center"><img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*BoVsWUZZIcxkgfzGCBeVEg.png" alt="drawing" width="700"/></p>
+<p align="center"><img src="assets/drawings/xrocket-full.png" alt="drawing" width="700"/></p>
 
 <br/><br/><br/>
 
