@@ -7,7 +7,7 @@ Slug: contact
 Authors: Felix Brunner
 Summary:
 
-I live in Berlin and am interested in project touching the subjects of data science and artificial intelligence. Feel free to approach me with any questions or suggestions!
+I live in Berlin and am interested in projects touching the subjects of data science and artificial intelligence. Please feel free to approach me with any questions, suggestions, or inquiries!
 
 ## Get in touch
 <ul class="list-group social">
