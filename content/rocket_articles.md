@@ -1,5 +1,5 @@
 Title: New articles on explainable encodings for time series classification
-Summary: Series of articles about an explainable solution to time series classification tasks with X-Rocket is now online.
+Summary: Series of articles about an explainable solution to time series classification tasks with X-ROCKET is now online.
 Date: 2023-11-08 12:00
 Modified: 2024-01-07 12:00
 Category: announcements

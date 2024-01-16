@@ -20,9 +20,9 @@ I live in Berlin and am interested in projects touching the subjects of data sci
 ## Find me on
 <ul class="list-group social">
 	<li class="list-group-item"><a href="https://github.com/felixbrunner"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+  <li class="list-group-item"><a href="https://medium.com/@fbrunner"><i class="fa fa-medium fa-lg"></i> medium</a></li>
   <li class="list-group-item"><a href="https://stackoverflow.com/users/10365292/rubelrennfix"><i class="fa fa-stack-overflow fa-lg"></i> stack-overflow</a></li>
   <li class="list-group-item"><a href="https://www.kaggle.com/felixbrunner"><i class="fa fa-rocket fa-lg"></i> kaggle</a></li>
-  <li class="list-group-item"><a href="https://medium.com/@fbrunner"><i class="fa fa-medium fa-lg"></i> medium</a></li>
   <!-- <li class="list-group-item"><a href="https://www.figshare.com"><i class="fa fa-figshare fa-lg"></i> figshare</a></li> -->
   <!-- <li class="list-group-item"><a href="https://www.overleaf.com"><i class="fa fa-overleaf fa-lg"></i> overleaf</a></li> -->
 </ul>
