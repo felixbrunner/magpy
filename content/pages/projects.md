@@ -9,16 +9,16 @@ Summary:
 
 <!-- ## Data Science Projects -->
 
-This page presents descriptions of some of the data projects I have been involved in.
+This page presents descriptions of some of the **data projects** I have been involved in.
 
 ## Quality prediction based on time series data in a manufacturing context
 <!-- with [Bond3D](https://www.bond3d.com/), [Fraunhofer IPT](https://www.ipt.fraunhofer.de/), and [dida machine learning](https://dida.do/), 2021-2023 -->
 
 <!-- **Description:** -->
 In this machine learning use case in the manufacturing domain the task is to analyze large amounts of **time series data** recorded from production machines with regards to their predictive power when it comes to the quality of the final products.
-Finding useful patterns in the **sonsory recordings** is challangeing due to the large data quantities connected to a single outcome label.
+Finding useful patterns in the **sensory recordings** is challenging due to the large data quantities connected to a single outcome label.
 A main task here is filtering and connecting various data sources and combining the data in way that can be ingested by a PyTorch neural network model.
-Multiple predictive model architectures have been tested, spaning from simple statistical models to deep convolutional neural networks.
+Multiple predictive model architectures have been tested, spanning from simple statistical models to deep convolutional neural networks.
 An additional emphasis is on **AI explainability** since the production engineers are especially interested in making sense of the findings.
 My role in this project was mainly in conceptualizing and implementing **data pipelines** and predictive algorithms.
 Details about the employed **model architecture** can be found in a three-part article (parts [one](https://medium.com/dida-machine-learning/explainable-time-series-classification-with-x-rocket-3087b912a08d?source=friends_link&sk=c9e42fa9bfe32cd58f804673ca5aef8c), [two](https://medium.com/dida-machine-learning/inside-x-rocket-explaining-the-explainable-rocket-534b104c4a08?source=friends_link&sk=4222cf1591d49181eff368f97d0bdee0) and [three](https://medium.com/dida-machine-learning/x-rocket-to-the-moon-c2848e740243?source=friends_link&sk=a8428dac4867839dc22007196c6a4f87)), and in the belonging [code repository](https://github.com/dida-do/xrocket).
@@ -53,7 +53,7 @@ I contributed to this project in the development of the implemented solution and
 This line of work aimed to proof the concept of question answering based on internal documents and to gain experience with state-of-the-art **NLP** developments.
 An early demo using **extractive** question answering based on **semantic search** is still online [here](https://dida.do/demos/question-answering).
 Later stages explored full-fletched **generative** question answering with the help of **large language models (LLMs)** and **retrieval augmented generation (RAG)**.
-My role in this project was to make contributions to the codebase and to update the involved developers about the latest trends in reserach and industry.
+My role in this project was to make contributions to the codebase and to update the involved developers about the latest trends in research and industry.
 
 <p align="center"><img src="https://files.readme.io/0343fcb-RAG_2.png" alt="drawing" width="700"/></p>
 
@@ -66,7 +66,7 @@ My role in this project was to make contributions to the codebase and to update 
 <!-- **Description:** -->
 As a basis for some of my [research papers](research), substantial coding effort was necessary in the context of financial time series data.
 First, this project required extensive data acquisition from large databases via **SQL**.
-Then, the project samples representative data points and uses a **data preprocessing pipeline** to prepare estimation data over a rolling time interval.
+Then, the project samples representative data points and uses a **data pre-processing pipeline** to prepare estimation data over a rolling time interval.
 [This repository](https://github.com/felixbrunner/euraculus) implements various **object-oriented programs (OOP)** for the estimation of **regularized statistical learning** algorithms with **cross-validation**.
 Finally, there are various flavors of **statistical analysis** to obtain the empirical results of the research papers.
 The code in the repository is written by myself, with conceptual help of my co-author [Ruben Hipp](https://sites.google.com/view/rubenhipp/home).

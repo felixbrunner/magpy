@@ -9,7 +9,7 @@ Summary:
 
 <!-- ## Academic Research -->
 
-This page lists some of the published and unpublished research papers I have been working on.
+This page lists some of the published and unpublished **research papers** I have been working on.
 
 ## Estimating large-dimensional connectedness tables: The Great Moderation through the lens of sectoral spillovers
 joint work with [Ruben Hipp](https://sites.google.com/view/rubenhipp/home), forthcoming in _Quantitative Economics_
