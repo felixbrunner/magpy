@@ -34,17 +34,17 @@ DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
 HIDE_SITENAME = True
 MENUITEMS = (
-    ("Home", "/index.html"),
+    # ("Home", "/index.html"),
     # ("Categories", "/categories.html"),
 )
 
 # visuals
-BANNER = "assets/images/banner.jpg"
+BANNER = "assets/images/banner.png"
 BANNER_ALL_PAGES = True
 BANNER_SUBTITLE = "My personal website"
-FAVICON = "assets/images/avatar.png"  #'images/favicon.ico'
-# SITELOGO = "images/logo.png"  # little logo in top navbar as home button
-# SITELOGO_SIZE = "20px"  # ??
+FAVICON = "assets/images/icon.png"  #'images/favicon.ico'
+SITELOGO = "assets/images/icon.png"  # little logo in top navbar as home button
+SITELOGO_SIZE = "20px"  # size of little logo in top navbar
 
 # sidebar
 HIDE_SIDEBAR = False
@@ -59,7 +59,7 @@ RECENT_POST_COUNT = 5
 DISPLAY_ARCHIVE_ON_SIDEBAR = False
 DISPLAY_AUTHORS_ON_SIDEBAR = False
 AVATAR = "assets/images/avatar.png"
-ABOUT_ME = "Data Scientist and Researcher in Econometrics"
+ABOUT_ME = "Data Scientist and Quantitative Researcher"
 TAG_CLOUD_MAX_ITEMS = 5
 
 # content

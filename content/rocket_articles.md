@@ -15,3 +15,5 @@ The [first part](https://medium.com/dida-machine-learning/explainable-time-serie
 Finally, [part three](https://medium.com/dida-machine-learning/x-rocket-to-the-moon-c2848e740243?source=friends_link&sk=a8428dac4867839dc22007196c6a4f87) of the article demonstrates the predictive performance and interpretability of the model in a practical usage example.
 
 The code belonging to the described X-ROCKET model can be found in [this repository](https://github.com/dida-do/xrocket).
+
+<p align="center"><img src="../assets/images/rocket_medium-head.png" alt="image" width="700"/></p>

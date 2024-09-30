@@ -13,3 +13,5 @@ The published version can be downloaded [here](https://www.econometricsociety.or
 We investigate the applicability of regularized estimators in the context of network estimation from timeseries data.
 We find that such methods outperform classical approaches in terms of both bias and variance, and apply an estimators to sectoral production spillovers.
 Given our estimates, we collect new evidence on possible reassons for the decline in macroeconomic volatility after the mid-1980s connected to a lessening spillover network.
+
+<p align="center"><img src="../assets/images/regic_qe-frontpage.png" alt="image" width="700"/></p>
