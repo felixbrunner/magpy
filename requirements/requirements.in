@@ -1,5 +1,5 @@
-pelican[markdown]
-pelican-fontawesome
+pelican[markdown]>=4.9
+# pelican-fontawesome
 typogrify
 ghp-import
 setuptools

@@ -23,8 +23,17 @@ DELETE_OUTPUT_DIRECTORY = True
 # Following items are often useful when publishing
 
 # DISQUS_SITENAME = 'felixbrunner' ??
-# GOOGLE_ANALYTICS = 'UA-24099413-2' ??
-# ADDTHIS_PROFILE = 'ra-4f274b9c7023574d' ??
+# GOOGLE_ANALYTICS = 'G-2Y1PCGBZSE'
+ANALYTICS = """
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Y1PCGBZSE"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2Y1PCGBZSE');
+    </script>
+"""
 
 ARTICLE_URL = "blog/{slug}"
 ARTICLE_SAVE_AS = "blog/{slug}.html"

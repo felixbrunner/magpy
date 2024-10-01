@@ -39,7 +39,7 @@ install:
 	git fetch $(GITHUB_USER_PAGE) $(GITHUB_USER_PAGE_BRANCH):$(GITHUB_PAGES_BRANCH)
 
 requirements:
-	pip install pip-tools
+	pip install --upgrade pip wheel pip-tools
 	pip-compile requirements/requirements.in
 
 compile:

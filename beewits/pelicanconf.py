@@ -22,7 +22,7 @@ PLUGINS = [
     # "liquid_tags.include_code",
     # "tipue_search",
     "i18n_subsites",
-    "pelican_fontawesome",
+    # "pelican_fontawesome",
 ]
 I18N_TEMPLATES_LANG = "en"
 PYGMENTS_STYLE = "native"
@@ -143,9 +143,17 @@ LINKS = (
 # EMAIL = "user@example.com"
 
 # google analytics
-GOOGLE_ANALYTICS = 'G-2Y1PCGBZSE'
-# GOOGLE_ANALYTICS_UNIVERSAL = ''
-# GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY = ''
+GOOGLE_ANALYTICS = "'G-2Y1PCGBZSE'" # IMPORTANT TO USE mixed quotes "'ID'"
+# ANALYTICS = """
+#     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Y1PCGBZSE"></script>
+#     <script>
+#     window.dataLayer = window.dataLayer || [];
+#     function gtag(){dataLayer.push(arguments);}
+#     gtag('js', new Date());
+
+#     gtag('config', 'G-2Y1PCGBZSE');
+#     </script>
+# """
 
 # disqus (comment section for articles)
 # DISQUS_SITENAME = ''
